@@ -1,0 +1,21 @@
+public class Cinema {
+    private String nom_ciné;
+    private Salle tab[];
+    double[][]tab_recette;
+    double[][]tab_taux;
+    int i = 0;
+     
+    public Cinema(String name,int i) {//Constructeur avec le nom du ciné et le nombre de salle
+        this.nom_ciné = nom_ciné;
+        tab = new Salle[i];
+        tab_recette = new double[i][7];
+        tab_taux = new double[i][7];
+    }
+ 
+    public Salle getSalle(int i) {//getteur de salle
+        return tab[i];
+    }
+    
+    public void vendreBillet(Personne p , int n_salle){
+       tab[n_salle].vendrePlace(p);
+    }
